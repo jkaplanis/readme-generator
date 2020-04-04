@@ -20,6 +20,8 @@ ${answers.description}
 
 ## Installation
 
+To install the dependencies, run the command below:
+
 \`\`\`
 ${answers.installation}
 \`\`\`
@@ -39,6 +41,8 @@ ${answers.license}
 ${answers.contributing}
 
 ## Tests
+
+To run test, run the command below:
 
 \`\`\`
 ${answers.tests}
