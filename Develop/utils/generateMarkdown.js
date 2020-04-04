@@ -46,7 +46,7 @@ ${answers.tests}
 
 ## Questions
 
-<img src="${answers.avatar_url}" alt="avatar" style="border-radius: 16px" width="30"/>
+<img src="${answers.avatar_url}" alt="avatar" style="border-radius: 64px" width="60"/>
 
 If you have any questions about the repo, open an issue or contat [${answers.username}](${answers.html_url}) directly at [${answers.email}](mailto:${answers.email}).`;
 }

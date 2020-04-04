@@ -64,7 +64,10 @@ function init() {
       answers.avatar_url = githubData.avatar_url;
       answers.html_url = githubData.html_url;
       const markdown = generateMarkdown(answers);
+      console.log("Generating file...");
       writeToFile("new-markdown/readme.md", markdown);
+      const readmePath = path.resolve("./new-markdown/readme.md");
+      console.log(`File location: ${readmePath}`);
     });
   });
 }
