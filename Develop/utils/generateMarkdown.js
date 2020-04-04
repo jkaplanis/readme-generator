@@ -1,4 +1,4 @@
-// TODO: Return markdown string for README file given a data object.
+// Return markdown string for README file given a data object.
 function generateMarkdown(answers) {
   return `
 # ${answers.title}
@@ -55,4 +55,5 @@ ${answers.tests}
 If you have any questions about the repo, open an issue or contact [${answers.username}](${answers.html_url}) directly at [${answers.email}](mailto:${answers.email}).`;
 }
 
+// Export module
 module.exports = generateMarkdown;

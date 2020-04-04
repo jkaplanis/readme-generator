@@ -1,12 +1,11 @@
+// require fs, path, inquirer, GitHub API, and GenerateMardown
 const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
-// TODO: import api and generateMarkdown modules from ./utils/
 const api = require("./utils/api.js");
 const generateMarkdown = require("./utils/generateMarkdown.js");
-// TODO: Add inquirer question objects to questions array. This should
-// include all the necessary questions for the user.
 
+// Array of questions to ask user via Inquirer
 const questions = [
   { type: "input", name: "username", message: "What is your GitHub username?" },
   { type: "input", name: "email", message: "What is your GitHub email?" },
@@ -46,29 +45,35 @@ const questions = [
   }
 ];
 
-// TODO: Write function to synchronously write data in the
-// current working directory to file named for the fileName parameter.
-// The data parameter is the text to write to the file.
+// Define function to synhronously write data to new file
 function writeToFile(fileName, data) {
   fs.writeFileSync(fileName, data);
 }
 
-// TODO: Use inquirer to prompt the user for each question in the
-// questions array. Then call api.getUser to fetch the user profile
-// data from GitHub. Finally generate the markdown and use writeToFile
-// to create the README.md file.
+// init function runs inquirer
 function init() {
   inquirer.prompt(questions).then(answers => {
+    // Use answers to run getUser function
     api.getUser(answers.username).then(githubData => {
+      // add avatar and user's GitHub url to the answers object
       answers.avatar_url = githubData.avatar_url;
       answers.html_url = githubData.html_url;
+
+      // Call generateMardown function passing answers object
+      // and save the returned markdown to const
       const markdown = generateMarkdown(answers);
       console.log("Generating file...");
+
+      // Call writeToFile function passing file location/name
+      // and markdown string
       writeToFile("new-markdown/readme.md", markdown);
+
+      // Create and log link to new file
       const readmePath = path.resolve("./new-markdown/readme.md");
       console.log(`File location: ${readmePath}`);
     });
   });
 }
 
+// Call init function
 init();
