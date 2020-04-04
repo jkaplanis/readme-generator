@@ -48,7 +48,7 @@ ${answers.tests}
 
 <img src="${answers.avatar_url}" alt="avatar" style="border-radius: 64px" width="60"/>
 
-If you have any questions about the repo, open an issue or contat [${answers.username}](${answers.html_url}) directly at [${answers.email}](mailto:${answers.email}).`;
+If you have any questions about the repo, open an issue or contact [${answers.username}](${answers.html_url}) directly at [${answers.email}](mailto:${answers.email}).`;
 }
 
 module.exports = generateMarkdown;
