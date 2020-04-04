@@ -31,6 +31,10 @@ node index.js
 
 ## Demo
 
+-Demo Video: https://youtu.be/zscqYzJsDcA  
+-Screenshot:
+![Screenshot](Develop/images/screenshot.png)
+
 ## Contributing
 
 Open a Pull Request with a detailed description and screenshots of your changes.

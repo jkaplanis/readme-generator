@@ -1,4 +1,3 @@
-// TODO: import fs, path and inquirer modules
 const fs = require("fs");
 const path = require("path");
 const inquirer = require("inquirer");
