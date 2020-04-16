@@ -33,7 +33,7 @@ node index.js
 
 -Demo Video: https://youtu.be/zscqYzJsDcA  
 -Screenshot:
-![Screenshot](Develop/images/screenshot.png)
+![Screenshot](./images/screenshot.png)
 
 ## Contributing
 
